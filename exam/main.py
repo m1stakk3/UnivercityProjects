@@ -25,9 +25,9 @@ def find_matches(image1, image2):
         if m.distance < 0.75 * n.distance:
             good_matches.append(m)
 
-        # Изменение размера изображений на 1920x1080 пикселей
-        img1 = cv2.resize(img1, (1920, 1080))
-        img2 = cv2.resize(img2, (1920, 1080))
+    # Изменение размера изображений на 1920x1080 пикселей
+    img1 = cv2.resize(img1, (1920, 1080))
+    img2 = cv2.resize(img2, (1920, 1080))
 
     # Визуализация совпадений
     img_matches = cv2.drawMatches(img1, keypoints1, img2, keypoints2, good_matches, None,
